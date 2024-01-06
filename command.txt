@@ -1,0 +1,13 @@
+1)-https://github.com/mcamara/laravel-localization
+ -composer require mcamara/laravel-localization
+ -php artisan vendor:publish --provider="Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider"
+
+2)-https://github.com/Astrotomic/laravel-translatable
+ -composer require astrotomic/laravel-translatable
+
+3)-https://github.com/laravel/breeze
+ -composer require laravel/breeze --dev
+ -php artisan breeze:install
+
+php artisan mi:f --seed
+
