@@ -15,10 +15,26 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 Route::get('/register', [RegisteredUserController::class, 'create'])->middleware('guest')->name('register');
 
 Route::post('/register', [RegisteredUserController::class, 'store'])->middleware('guest');
+=======
+Route::get('/register', [RegisteredUserController::class, 'create'])
+                ->middleware('guest')
+                ->name('register');
+=======
+Route::get('/register', [RegisteredUserController::class, 'create'])->middleware('guest')->name('register');
+>>>>>>> 5695330 (changes)
 
+Route::post('/register', [RegisteredUserController::class, 'store'])->middleware('guest');
+
+<<<<<<< HEAD
+>>>>>>> accd45d (hospital)
+
+=======
+>>>>>>> 2231f2e (data)
 //################################## Route User ##############################################
 
 Route::get('/login', [AuthenticatedSessionController::class, 'create'])->middleware('guest')->name('login');
@@ -35,6 +51,13 @@ Route::post('/logout/admin', [AdminController::class, 'destroy'])->middleware('a
 
 //#############################################################################################
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> accd45d (hospital)
+=======
+>>>>>>> 2231f2e (data)
 //################################## Route Doctor ##############################################
 
 Route::post('/login/doctor', [DoctorController::class, 'store'])->middleware('guest')->name('login.doctor');
@@ -51,6 +74,13 @@ Route::post('/logout/ray_employee', [RayEmployeeController::class, 'destroy'])->
 
 //#############################################################################################
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> accd45d (hospital)
+=======
+>>>>>>> 2231f2e (data)
 //################################## Route laboratorie_employee ##############################################
 
 Route::post('/login/laboratorie_employee', [LaboratorieEmployeeController::class, 'store'])->middleware('guest')->name('login.laboratorie_employee');
@@ -59,6 +89,13 @@ Route::post('/logout/laboratorie_employee', [LaboratorieEmployeeController::clas
 
 //#############################################################################################
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> accd45d (hospital)
+=======
+>>>>>>> 2231f2e (data)
 //################################## Route patient ##############################################
 
 Route::post('/login/patient', [PatientController::class, 'store'])->middleware('guest')->name('login.patient');
@@ -67,6 +104,15 @@ Route::post('/logout/patient', [PatientController::class, 'destroy'])->middlewar
 
 //#############################################################################################
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> accd45d (hospital)
+=======
+>>>>>>> 2231f2e (data)
 Route::get('/forgot-password', [PasswordResetLinkController::class, 'create'])
                 ->middleware('guest')
                 ->name('password.request');
