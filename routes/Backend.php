@@ -17,76 +17,35 @@ use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-| Backend Routes ====> last 07
-=======
 | Backend Routes
->>>>>>> accd45d (hospital)
-=======
-| Backend Routes ====> last 6
->>>>>>> 5695330 (changes)
-=======
-| Backend Routes ====> last 12
->>>>>>> fef324d (changes)
 |--------------------------------------------------------------------------
 |
-| Here is where you can register Backend routes for your application. These
+| Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
-| contains the "Backend" middleware group. Now create something great!
+| contains the "web" middleware group. Now create something great!
 |
 */
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 Route::get('/Dashboard_Admin', [DashboardController::class, 'index']);
 
-Route::group(
-
-=======
-
-
-=======
->>>>>>> 5695330 (changes)
-Route::get('/Dashboard_Admin', [DashboardController::class, 'index']);
 
 Route::group(
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> accd45d (hospital)
-=======
-    
->>>>>>> 5695330 (changes)
-=======
-
->>>>>>> fef324d (changes)
     [
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ], function(){
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> accd45d (hospital)
-=======
->>>>>>> fef324d (changes)
    //################################ dashboard user ##########################################
     Route::get('/dashboard/user', function () {
         return view('Dashboard.User.dashboard');
-    })->middleware(['auth:web'])->name('dashboard.user');
+    })->middleware(['auth'])->name('dashboard.user');
     //################################ end dashboard user #####################################
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> accd45d (hospital)
-=======
->>>>>>> fef324d (changes)
     //################################ dashboard admin ########################################
     Route::get('/dashboard/admin', function () {
         return view('Dashboard.Admin.dashboard');
@@ -94,45 +53,21 @@ Route::group(
 
     //################################ end dashboard admin #####################################
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 //---------------------------------------------------------------------------------------------------------------
-=======
-    //------------------------------------------------------------------------------------------
->>>>>>> fef324d (changes)
+
 
     Route::middleware(['auth:admin'])->group(function () {
 
-        //############################# sections route ##########################################
+    //############################# sections route ##########################################
 
         Route::resource('Sections', SectionController::class);
 
-        //############################# end sections route ######################################
-
-        //############################# Doctors route ##########################################
-=======
+    //############################# end sections route ######################################
 
 
-=======
->>>>>>> 5695330 (changes)
-//---------------------------------------------------------------------------------------------------------------
-
-    Route::middleware(['auth:admin'])->group(function () {
-
-        //############################# sections route ##########################################
-
-            Route::resource('Sections', SectionController::class);
-
-        //############################# end sections route ######################################
-
-
-<<<<<<< HEAD
      //############################# Doctors route ##########################################
->>>>>>> accd45d (hospital)
-=======
-        //############################# Doctors route ##########################################
->>>>>>> 5695330 (changes)
 
         Route::resource('Doctors', DoctorController::class);
         Route::post('update_password', [DoctorController::class, 'update_password'])->name('update_password');
@@ -216,11 +151,16 @@ Route::group(
 
         //############################# end single_invoices route ######################################
 
+
         Route::get('appointments',[AppointmentController::class,'index'])->name('appointments.index');
         Route::put('appointments/approval/{id}',[AppointmentController::class,'approval'])->name('appointments.approval');
         Route::get('appointments/approval',[AppointmentController::class,'index2'])->name('appointments.index2');
 
+
     });
 
+
     require __DIR__.'/auth.php';
+
+
 });
