@@ -5,16 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use App\Interfaces\Sections\SectionRepositoryInterface;
 use Illuminate\Http\Request;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use App\Http\Requests\SectionsRequest;
-
-=======
->>>>>>> 5695330 (changes)
-=======
-use App\Http\Requests\SectionsRequest;
-
->>>>>>> fef324d (changes)
 
 class SectionController extends Controller
 {
@@ -38,15 +29,7 @@ class SectionController extends Controller
     }
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function store(SectionsRequest $request)
-=======
-    public function store(Request $request)
->>>>>>> 5695330 (changes)
-=======
-    public function store(SectionsRequest $request)
->>>>>>> fef324d (changes)
     {
         return $this->Sections->store($request);
     }
