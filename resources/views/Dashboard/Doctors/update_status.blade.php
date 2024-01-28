@@ -15,19 +15,21 @@
                 <div class="modal-body">
 
                     <div class="form-group">
-                        <label for="status">{{trans('doctors.Status')}}</label>
+                        <label for="status">{{ trans('doctors.Status') }}</label>
                         <select class="form-control" id="status" name="status" required>
-                            <option value="" selected disabled>--{{trans('doctors.Choose')}}--</option>
-                            <option value="1">{{trans('doctors.Enabled')}}</option>
-                            <option value="0">{{trans('doctors.Not_enabled')}}</option>
+                            <option value="" selected disabled>--{{ trans('doctors.Choose') }}--</option>
+                            <option value="1">{{ trans('doctors.Enabled') }}</option>
+                            <option value="0">{{ trans('doctors.Not_enabled') }}</option>
                         </select>
                     </div>
 
                     <input type="hidden" name="id" value="{{ $doctor->id }}">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">{{trans('Dashboard/sections_trans.Close')}}</button>
-                    <button type="submit" class="btn btn-primary">{{trans('Dashboard/sections_trans.submit')}}</button>
+                    <button type="button" class="btn btn-secondary"
+                        data-dismiss="modal">{{ trans('Dashboard/sections_trans.Close') }}</button>
+                    <button type="submit"
+                        class="btn btn-primary">{{ trans('Dashboard/sections_trans.submit') }}</button>
                 </div>
             </form>
         </div>
